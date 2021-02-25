@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/daiphung-demo/static/css/main.1a4c6ef9.chunk.css",
+    "main.js": "/daiphung-demo/static/js/main.dcfa240f.chunk.js",
+    "main.js.map": "/daiphung-demo/static/js/main.dcfa240f.chunk.js.map",
+    "runtime-main.js": "/daiphung-demo/static/js/runtime-main.b0f7272f.js",
+    "runtime-main.js.map": "/daiphung-demo/static/js/runtime-main.b0f7272f.js.map",
+    "static/css/2.cc6972a9.chunk.css": "/daiphung-demo/static/css/2.cc6972a9.chunk.css",
+    "static/js/2.a0b8dd68.chunk.js": "/daiphung-demo/static/js/2.a0b8dd68.chunk.js",
+    "static/js/2.a0b8dd68.chunk.js.map": "/daiphung-demo/static/js/2.a0b8dd68.chunk.js.map",
+    "static/js/3.5734b622.chunk.js": "/daiphung-demo/static/js/3.5734b622.chunk.js",
+    "static/js/3.5734b622.chunk.js.map": "/daiphung-demo/static/js/3.5734b622.chunk.js.map",
+    "index.html": "/daiphung-demo/index.html",
+    "static/css/2.cc6972a9.chunk.css.map": "/daiphung-demo/static/css/2.cc6972a9.chunk.css.map",
+    "static/css/main.1a4c6ef9.chunk.css.map": "/daiphung-demo/static/css/main.1a4c6ef9.chunk.css.map",
+    "static/js/2.a0b8dd68.chunk.js.LICENSE.txt": "/daiphung-demo/static/js/2.a0b8dd68.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0f7272f.js",
+    "static/css/2.cc6972a9.chunk.css",
+    "static/js/2.a0b8dd68.chunk.js",
+    "static/css/main.1a4c6ef9.chunk.css",
+    "static/js/main.dcfa240f.chunk.js"
+  ]
+}
