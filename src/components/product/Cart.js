@@ -11,11 +11,11 @@ import {incrementProject as incrementProjectAction,
   deleteItemPayCart as deleteItemPayCartAction,
   payCartNoUser as payCartNoUserAction
 } from '../../redux/actions/userAction'
-import {
-  decrementCountPayByCart as decrementCountPayByCartAction,
-  incrementCountPayByCart as incrementCountPayByCartAction,
-  onchangeInputPayByCart as onchangeInputPayByCartAction
-} from './../../redux/actions/products'
+// import {
+//   decrementCountPayByCart as decrementCountPayByCartAction,
+//   incrementCountPayByCart as incrementCountPayByCartAction,
+//   onchangeInputPayByCart as onchangeInputPayByCartAction
+// } from './../../redux/actions/products'
 
 const Cart = () => {
   const dispatch = useDispatch()
@@ -170,17 +170,17 @@ const Cart = () => {
       id: Number(event.target.id)
     }
     dispatch(numberInputProjectAction(newNumber))
-    dispatch(onchangeInputPayByCartAction(newNumber))
+    // dispatch(onchangeInputPayByCartAction(newNumber))
   }
 
   const increment = (id) => {
     dispatch(incrementProjectAction(id))
-    dispatch(incrementCountPayByCartAction(id))
+    // dispatch(incrementCountPayByCartAction(id))
   }
 
   const decrement = (id) => {
     dispatch(decrementProjectAction(id))
-    dispatch(decrementCountPayByCartAction(id))
+    // dispatch(decrementCountPayByCartAction(id))
   }
 
   const deleteItem = (id) => {
@@ -338,7 +338,7 @@ const Cart = () => {
                 rules={[{ required: true, message: 'Please input your email!' },
                   ({ getFieldValue }) => ({
                     validator(rule, value = "") {
-                      const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                      const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; //eslint-disable-line
                       if (value.length > 0 && !re.test(value)) {
                         return Promise.reject("Minimum 10 characters");
                       } else {

@@ -28,6 +28,7 @@ const Products = ({type}) => {
 
   useEffect(() => {
     fetchProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const searchByPrice1 = value => {
@@ -49,6 +50,8 @@ const Products = ({type}) => {
       newArr.sort((a, b) => {
         if (a.price < b.price) {
           return -1;
+        } else {
+          return 0
         }
       })
       setListSort(newArr)
@@ -58,6 +61,8 @@ const Products = ({type}) => {
       newArr.sort((a,b) => {
         if (a.price > b.price) {
           return -1;
+        } else {
+          return 0
         }
       })
       setListSort(newArr)
@@ -67,6 +72,8 @@ const Products = ({type}) => {
       newArr.sort((a,b) => {
         if (a.name < b.name) {
           return -1;
+        } else {
+          return 0
         }
       })
       setListSort(newArr)
@@ -76,6 +83,8 @@ const Products = ({type}) => {
       newArr.sort((a,b) => {
         if (a.name > b.name) {
           return -1;
+        } else {
+          return 0
         }
       })
       setListSort(newArr)

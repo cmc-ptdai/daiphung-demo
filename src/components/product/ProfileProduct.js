@@ -5,7 +5,7 @@ import productApi from '../../api/productApi'
 import './ProfileProduct.scss'
 import {addCartByProfile as addCartByProfileAction} from '../../redux/actions/userAction'
 import {
-  decrementCountPayProfile,
+  // decrementCountPayProfile,
   setEvaluate as setEvaluateAction
 } from "./../../redux/actions/products";
 import { Tabs, Rate, Modal, Button, notification } from 'antd';
@@ -46,6 +46,7 @@ const ProfileProduct = () => {
 
   useEffect(() => {
     fetchProduct()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const increment = () => {
@@ -79,7 +80,7 @@ const ProfileProduct = () => {
       number: number
     }
     dispatch(addCartByProfileAction(data))
-    dispatch(decrementCountPayProfile(data))
+    // dispatch(decrementCountPayProfile(data))
     setNumber(1)
     openNotification(product[0])
   }

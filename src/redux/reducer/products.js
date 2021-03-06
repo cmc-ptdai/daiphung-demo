@@ -2,9 +2,9 @@ import {
   GET_PRODUCT,
   DECREMENT_COUNT_PAY,
   DECREMENT_COUNT_PAY_PROFILE,
-  DECREMENT_COUNT_PAY_BY_CART,
-  INCREMENT_COUNT_PAY_BY_CART,
-  ONCHANGE_NUMBER_INPUT_BY_CART,
+  // DECREMENT_COUNT_PAY_BY_CART,
+  // INCREMENT_COUNT_PAY_BY_CART,
+  // ONCHANGE_NUMBER_INPUT_BY_CART,
   SET_EVALUATE
 } from '../actionType'
 
@@ -37,39 +37,39 @@ const productReducer = (state = initialState, action) => {
       return state = [...newArr]
     }
 
-    case DECREMENT_COUNT_PAY_BY_CART: {
-      const newArr = [...state]
+    // case DECREMENT_COUNT_PAY_BY_CART: {
+    //   const newArr = [...state]
 
-      newArr.forEach(item => {
-        if (item.id === action.payload) {
-          item.countPay = item.countPay + 1
-        }
-      })
-      return state = [...newArr]
-    }
+    //   newArr.forEach(item => {
+    //     if (item.id === action.payload) {
+    //       item.countPay = item.countPay + 1
+    //     }
+    //   })
+    //   return state = [...newArr]
+    // }
 
-    case INCREMENT_COUNT_PAY_BY_CART: {
-      const newArr = [...state]
+    // case INCREMENT_COUNT_PAY_BY_CART: {
+    //   const newArr = [...state]
 
-      newArr.forEach(item => {
-        if (item.id === action.payload) {
-          item.countPay = item.countPay - 1
-        }
-      })
-      console.log(newArr);
-      return state = [...newArr]
-    }
+    //   newArr.forEach(item => {
+    //     if (item.id === action.payload) {
+    //       item.countPay = item.countPay - 1
+    //     }
+    //   })
+    //   console.log(newArr);
+    //   return state = [...newArr]
+    // }
 
-    case ONCHANGE_NUMBER_INPUT_BY_CART: {
-      const newArr = [...state]
-      newArr.forEach(item => {
-        if (item.id === action.payload.id) {
-          item.countPay = item.countPay + action.payload.numberCurrent
-          item.countPay = item.countPay - Number(action.payload.value)
-        }
-      })
-      return state = [...newArr]
-    }
+    // case ONCHANGE_NUMBER_INPUT_BY_CART: {
+    //   const newArr = [...state]
+    //   newArr.forEach(item => {
+    //     if (item.id === action.payload.id) {
+    //       item.countPay = item.countPay + action.payload.numberCurrent
+    //       item.countPay = item.countPay - Number(action.payload.value)
+    //     }
+    //   })
+    //   return state = [...newArr]
+    // }
 
     case SET_EVALUATE: {
       const newArr = [...state]

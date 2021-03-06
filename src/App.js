@@ -31,7 +31,6 @@ const App = () => {
   const fetchProducts = async () => {
     try {
       const listProduct = await ProductApi.getAll()
-      console.log(listProduct);
       const user = await UserApi.getUser('')
       dispatch(getProductAction(listProduct))
       dispatch(getUserAction(user))
@@ -42,6 +41,7 @@ const App = () => {
 
   useEffect(() => {
     fetchProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <>

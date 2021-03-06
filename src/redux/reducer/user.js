@@ -8,7 +8,7 @@ import {
   DELETE_LIST_ITEM_CART,
   PAY_CART,
   ADD_CART_BY_PROFILE,
-  DECREMENT_COUNT_PAY_BY_CART,
+  // DECREMENT_COUNT_PAY_BY_CART,
   PAY_CART_NO_USER
 } from '../actionType'
 
@@ -73,7 +73,7 @@ const useReducer  = (state = initialState, action) => {
         }
       }
     }
-
+    /* falls through */
     case ADD_CART_BY_PROFILE: {
       let cartAction = user.cart
       let newData = {}
@@ -211,20 +211,20 @@ const useReducer  = (state = initialState, action) => {
       }
     }
 
-    case DECREMENT_COUNT_PAY_BY_CART: {
-      action.payload.forEach(item => {
-        cart.forEach(elem => {
-          if (item === elem.id && elem.count !== 0) {
-            user.cart = user.cart.filter(i => i.id !== item)
+    // case DECREMENT_COUNT_PAY_BY_CART: {
+    //   action.payload.forEach(item => {
+    //     cart.forEach(elem => {
+    //       if (item === elem.id && elem.count !== 0) {
+    //         user.cart = user.cart.filter(i => i.id !== item)
 
-          }
-        })
-      })
-      return {
-        ...state,
-        user: user
-      }
-    }
+    //       }
+    //     })
+    //   })
+    //   return {
+    //     ...state,
+    //     user: user
+    //   }
+    // }
 
     default:
       return state
